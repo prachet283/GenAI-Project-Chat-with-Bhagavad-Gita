@@ -3,7 +3,7 @@ from flask_cors import CORS
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
@@ -120,4 +120,4 @@ def chat():
 
 # Run Flask
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=8080,debug=True)

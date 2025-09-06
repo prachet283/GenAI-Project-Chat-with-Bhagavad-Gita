@@ -77,8 +77,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../assets/feather.png") no-repeat left bottom;
-  background-size: 450px;
+  background: url("../assets/feather.png") center;
+  background-size: 420px;
   opacity: 0.1;
   pointer-events: none; /* So it doesn't block clicks */
   z-index: -1; /* Push it behind the chat content */
