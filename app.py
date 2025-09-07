@@ -11,6 +11,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import HumanMessage, AIMessage
 from dotenv import load_dotenv
+import os
 
 # Load environment variables (API keys etc.)
 load_dotenv()
@@ -125,4 +126,5 @@ def chat():
 
 # Run Flask
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=8080,debug=True)
+    port = int(os.environ.get("PORT", 8080))  # Render sets PORT automatically
+    app.run(host="0.0.0.0", port=port, debug=False)
